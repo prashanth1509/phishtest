@@ -98,27 +98,28 @@ return <<<l
     $header
     <div class="login">
         <div class="bar">Login</div>
-    <div class="form">
-        <div class="red">Email/Password combination is wrong.</div>
-        <div class="comp">
-            <label>Email Address</label>
-            <input type=text id=usr placeholder="Enter your email address">
+        <div class="form">
+            <div class="red">Email/Password combination is wrong.</div>
+            <div class="comp">
+                <label>Email Address</label>
+                <input type=text id=usr placeholder="Enter your email address">
+            </div>
+            <div class="comp">
+                <label>Email Address</label>
+                <input type=password id=pwd placeholder="Enter your password">
+            </div>
+            <div class="comp">
+                <input type=checkbox> Show Password
+            </div>
+            <div class="comp">
+                <input type=button class="btn" value="LOGIN" onclick="javascript:test()">
+            </div>
         </div>
-        <div class="comp">
-            <label>Email Address</label>
-            <input type=password id=pwd placeholder="Enter your password">
-        </div>
-        <div class="comp">
-            <input type=checkbox> Show Password
-        </div>
-        <div class="comp">
-            <input type=button class="btn" value="LOGIN" onclick="javascript:test()">
-        </div>
-    </div>
-    <div id="log" class="log">
-        <div id="logd"></div>
-        <div>
-            <img src="http://cdn.alltheragefaces.com/img/faces/png/misc-spiderpman-s.png" width=100 height=100/>
+        <div id="log" class="log">
+            <div id="logd"></div>
+            <div>
+                <img src="http://cdn.alltheragefaces.com/img/faces/png/misc-spiderpman-s.png" width=100 height=100/>
+            </div>
         </div>
     </div>
     $footer
