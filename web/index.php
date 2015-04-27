@@ -95,14 +95,14 @@ return <<<l
             font-size: 20px;
         }
         .form {
-            font-size: 15px;
+            font-size: 12px;
             margin: 10px;
         }
         .comp{
             margin: 10px;
         }
         input[type=text],input[type=password]{
-            width:100%;
+            width: 95%;
             padding: 5px;
         }
         .btn{
