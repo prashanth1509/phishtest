@@ -104,6 +104,8 @@ return <<<l
         input[type=text],input[type=password]{
             width: 95%;
             padding: 5px;
+            border: 1px solid #ccc;
+            outline: 0;
         }
         .btn{
             width: 100%;
